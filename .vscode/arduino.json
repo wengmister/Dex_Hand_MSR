@@ -1,0 +1,10 @@
+{
+    "port": "COM4",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "sketch": "script\\fs90r_test\\PCA9685\\pca9685_test.ino",
+    "output": "../build",
+    "prebuild": "./prebuild.sh",
+    "postbuild": "./postbuild.sh",
+    "intelliSenseGen": "global"
+}

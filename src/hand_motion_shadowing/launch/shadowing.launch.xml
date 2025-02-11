@@ -1,0 +1,16 @@
+<launch>
+    <arg name="usb" default="/dev/ttyUSB0"/>
+    <!-- Vision nodes -->
+    <include file="$(find-pkg-share hand_mediapipe)/launch/vision_mediapipe.launch.xml">
+        <arg name="camera" value="usb"/>
+    </include>
+
+    <!-- Servo control node -->
+    <include file="$(find-pkg-share hand_servo_control)/launch/multi_servo.launch.xml">
+        <arg name="usb" value="$(var usb)"/>
+        <arg name="input_mode" value="streaming"/>
+    </include>
+
+    <!-- Hand motion shadowing node -->
+    <node pkg="hand_motion_shadowing" exec="hand_shadowing" name="hand_motion_shadowing_node" output="screen" />
+</launch>

@@ -1,0 +1,17 @@
+__pycache__
+
+# Uplaods
+*.zip
+
+# Solidworks temp files
+~$*.*
+
+# ROS Artifacts
+/build
+/install
+/log
+
+# firmware built for microros
+/firmware
+
+/_
