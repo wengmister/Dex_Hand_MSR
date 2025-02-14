@@ -36,16 +36,18 @@ Change usb port based on your device setting.
 
 # Video Demos
 
-Gesture shadowing:
-<video src="https://github.com/user-attachments/assets/0db28344-a502-47d2-a634-60a5d58810e5" alt="hand preview" width="500">     
+Gesture shadowing:    
+![shadow](https://github.com/user-attachments/assets/f33a0adb-ee92-4414-a5de-c9753492a840)    
 
 
-Grasping:  
-<video src="https://github.com/user-attachments/assets/7efeba12-ba80-4d51-804c-60a675f6e553" alt="hand preview" width="500">  
+Grasping:    
+![grasp](https://github.com/user-attachments/assets/809da993-90ee-4199-834b-34dcadf37cdb)    
 
 
-Pinching:  
-<video src="https://github.com/user-attachments/assets/52858940-0318-4b44-8dcc-6cd21f4d2a6e" alt="hand preview" width="500">  
+
+Pinching:   
+![pinch](https://github.com/user-attachments/assets/91bb948a-0aeb-4b71-be7d-b1b7ebd2675b)    
+
 
 
 
