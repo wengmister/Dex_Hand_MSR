@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>hand_mediapipe</name>
+  <name>hand_vision</name>
   <version>0.0.0</version>
   <description>Package for using mediapipe hand recognition</description>
   <maintainer email="wengmister@gmail.com">Zhengyang Kris Weng</maintainer>

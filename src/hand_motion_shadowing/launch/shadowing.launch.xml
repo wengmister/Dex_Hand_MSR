@@ -1,8 +1,10 @@
 <launch>
     <arg name="usb" default="/dev/ttyUSB0"/>
+    <!-- usb or quest -->
+    <arg name="cam" default="quest"/>
     <!-- Vision nodes -->
-    <include file="$(find-pkg-share hand_mediapipe)/launch/vision_mediapipe.launch.xml">
-        <arg name="camera" value="usb"/>
+    <include file="$(find-pkg-share hand_vision)/launch/vision.launch.xml">
+        <arg name="camera" value="$(var cam)"/>
     </include>
 
     <!-- Servo control node -->
@@ -11,6 +13,13 @@
         <arg name="input_mode" value="streaming"/>
     </include>
 
-    <!-- Hand motion shadowing node -->
-    <node pkg="hand_motion_shadowing" exec="hand_shadowing" name="hand_motion_shadowing_node" output="screen" />
+    <!-- Hand motion shadowing node with usb cam -->
+    <node pkg="hand_motion_shadowing" exec="hand_shadowing" name="hand_shadowing_node" output="screen" if="$(eval '\'$(var cam)\'==\'usb\'')">
+        <param from="$(find-pkg-share hand_motion_shadowing)/config/v2mp.yaml" />
+    </node>
+
+    <node pkg="hand_motion_shadowing" exec="hand_shadowing" name="hand_shadowing_node" output="screen" if="$(eval '\'$(var cam)\'==\'quest\'')">
+        <param from="$(find-pkg-share hand_motion_shadowing)/config/v2quest.yaml" />
+    </node>
+
 </launch>

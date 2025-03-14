@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'hand_mediapipe'
+package_name = 'hand_vision'
 
 setup(
     name=package_name,
@@ -10,7 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch/', ['launch/vision_mediapipe.launch.xml'])
+        ('share/' + package_name + '/launch/', ['launch/vision.launch.xml'])
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -21,8 +21,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'hand_angle_node = hand_mediapipe.hand_angle_node:main',
-            'hand_joint_gui_node = hand_mediapipe.hand_joint_gui_node:main',
+            'hand_angle_node = hand_vision.hand_angle_node:main',
+            'hand_joint_gui_node = hand_vision.hand_joint_gui_node:main',
+            'hand_angle_quest = hand_vision.hand_angle_quest:main'
         ],
     },
 )

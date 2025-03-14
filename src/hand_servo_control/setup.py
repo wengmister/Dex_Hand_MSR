@@ -10,7 +10,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch/', ['launch/multi_servo.launch.xml']),
+        ('share/' + package_name + '/launch/', ['launch/multi_servo.launch.xml',
+                                                'launch/demo.launch.xml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -22,7 +23,8 @@ setup(
     entry_points={
         'console_scripts': [
             'single_servo_control = hand_servo_control.single_servo_control:main',
-            'multi_servo_control = hand_servo_control.servo_control_node:main'
+            'multi_servo_control = hand_servo_control.servo_control_node:main',
+            'demo_motion = hand_servo_control.demo_motion_node:main',
         ],
     },
 )

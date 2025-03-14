@@ -62,7 +62,7 @@ class ServoControlNode(Node):
         
         try:
             self.serial.write(command_string.encode())
-            self.get_logger().info(f'Sent command: {command_string.strip()}')
+            # self.get_logger().info(f'Sent command: {command_string.strip()}')
             response.success = True
         except Exception as e:
             self.get_logger().error(f'Failed to send command: {e}')
@@ -87,7 +87,7 @@ class ServoControlNode(Node):
         
         try:
             self.serial.write(command_string.encode())
-            self.get_logger().info(f'Sent command: {command_string.strip()}')
+            # self.get_logger().info(f'Sent command: {command_string.strip()}')
         except Exception as e:
             self.get_logger().error(f'Failed to send command: {e}')
 
